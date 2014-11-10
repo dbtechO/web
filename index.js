@@ -1,12 +1,16 @@
-var express = require('express')
+var express = require('express'),
+    exphbs  = require('express-handlebars');
+
 var app = express();
 
-app.set('port', ( 8080))
-app.use(express.static(__dirname + '/public'))
+app.set('port', (8080))
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
-app.get('/', function(request, response) {
-  response.send('Hello World!')
-})
+
+app.get('/', function (req, res) {
+    res.render('home' );
+});
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
