@@ -7,7 +7,6 @@ html
 		block scripts
 			link(rel="stylesheet" href="styles/foundation/css/foundation.css")
 			link(src="styles/foundation/js/vendor/modernizr.js")
-	  
 	body
 		block content
 
@@ -16,5 +15,4 @@ html
 		block js
 			script(src="styles/foundation/js/vendor/jquery.js")
 			script(src="styles/foundation/js/foundation.min.js")
-			script
-				$(document).foundation();
+			script $(document).foundation();

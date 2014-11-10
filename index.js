@@ -6,7 +6,7 @@ var app = express();
 
 app.set('port', (8080))
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
+app.set('view engine', 'jade');
 
 app.use('/styles', express.static(__dirname + '/styles'));
 
