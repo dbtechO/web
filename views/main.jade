@@ -1,0 +1,20 @@
+html
+	head
+		title My Site - #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+		block scripts
+			link(rel="stylesheet" href="styles/foundation/css/foundation.css")
+			link(src="styles/foundation/js/vendor/modernizr.js")
+	  
+	body
+		block content
+
+		block foot
+
+		block js
+			script(src="styles/foundation/js/vendor/jquery.js")
+			script(src="styles/foundation/js/foundation.min.js")
+			script
+				$(document).foundation();
