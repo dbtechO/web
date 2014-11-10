@@ -2,9 +2,9 @@
   "name": "dbweb",
   "version": "0.1.2",
   "description": "The db web",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "~4.9.x",
