@@ -9,7 +9,8 @@
   "dependencies": {
     "express": "~4.9.x",
     "cool-ascii-faces": "~1.3.x",
-    "foundation": "~4.2.x"
+    "foundation": "~4.2.x",
+    "handlebars": "~2.x.x"
   },
   "engines": {
     "node": "0.10.x"
