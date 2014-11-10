@@ -2,10 +2,14 @@ extends ./main.jade
 
 
 block content
-  .row
-    .large-12.columns
-      h1 Welcome to Foundation
-  .row
+  script(type="text/x-handlebars")
+    .row
+      .large-12.columns
+        h1 Welcome to Foundation
+    .row
+      {{outlet}}
+
+  script#index(type="text/x-handlebars") 
     .large-12.columns
       .panel
         h3 We&#8217;re stoked you want to try Foundation! 
@@ -27,4 +31,4 @@ block content
             p
               a(href="http://twitter.com/foundationzurb") @foundationzurb
               br
-              | Ping us on Twitter if you have questions. If you build something with this we"d love to see it (and send you a totally boss sticker).
+              | Ping us on Twitter if you have questions. If you build something with this we"d love to see it (and send you a totally boss sticker).  
