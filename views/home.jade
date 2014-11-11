@@ -6,9 +6,16 @@ block content
     .row
       .large-12.columns
         h1 Data Bait LLC
-    .row
-      {{outlet}}
-
+        nav.top-bar(data-topbar='data-topbar', role='navigation')
+          ul.title-area
+            li.name
+              h1{{#link-to 'index'}}Home{{/link-to}}
+          section.top-bar-section
+            ul.right  
+              li.active {{#link-to 'about'}}About{{/link-to}}
+    .row {{outlet}}
+  script#about(type="text/x-handlebars")
+        p yo
   script#index(type="text/x-handlebars") 
     .large-12.columns
       .panel
@@ -18,8 +25,7 @@ block content
         p Once you"ve exhausted the fun in this document, you should check out:
         .row
           .large-4.medium-4.columns
-            p
-              a(href="http://foundation.zurb.com/docs") Foundation Documentation
+            p {{#link-to 'about'}} Foundation Documentation {{/link-to}}
               br
               | Everything you need to know about using the framework.
           .large-4.medium-4.columns
