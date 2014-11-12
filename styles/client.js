@@ -5,3 +5,9 @@ App.Router.map(function() {
 	this.resource('projects');
 })
 
+$(document).ready(function(){
+	$('.conveyor').slick({
+		infinite:true
+	});
+});
+
