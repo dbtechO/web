@@ -5,12 +5,4 @@ App.Router.map(function() {
 	this.resource('projects');
 })
 
-$(document).ready(function(){
-    $('.conveyor').slick({
-        dots: true,
-        infinite: true,
-        autoplay: true, 
-        centerMode: false,
-        speed: 300,
-    });
-});
+$('.carousel').carousel()
