@@ -9,13 +9,15 @@ block content
         nav.top-bar(data-topbar='data-topbar', role='navigation')
           ul.title-area
             li.name
-              h1{{#link-to 'index'}}Home{{/link-to}}
+              h1 {{#link-to 'index'}}Home{{/link-to}}
           section.top-bar-section
             ul.right  
               li.active {{#link-to 'about'}}About{{/link-to}}
     .row {{outlet}}
-  script#about(type="text/x-handlebars")
-    .conveyor
+  //  
+    script#about(type="text/x-handlebars")
+      .conveyor
+
   script#index(type="text/x-handlebars") 
     .large-12.columns
       .panel

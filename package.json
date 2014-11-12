@@ -11,7 +11,8 @@
     "cool-ascii-faces": "~1.3.x",
     "express-handlebars": "~1.1.x",
     "supervisor": "~0.6.x",
-    "jade": "*"
+    "jade": "*",
+    "slick-carousel": "*"
   },
   "engines": {
     "node": "0.10.x"
