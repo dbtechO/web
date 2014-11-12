@@ -1,3 +1,28 @@
 body{
-	background-color: 00CCFF;
+	background-color: 29516D;
+}
+.jumbotron{
+	background-color:708EA4;
+	padding-left:50px;
+	padding-right:50px;
+	margin-left:auto;
+	margin-right:auto;
+	color: EDFFED;
+
+}
+img.resize {
+	min-height:500px;
+	max-height: 500px;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+nav {
+	background-color: 486D88;
+}
+.carousel-caption{
+	opacity:0;
+}
+.carousel-caption:hover{
+	opacity:1.0;
 }

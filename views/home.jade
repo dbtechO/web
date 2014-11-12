@@ -14,9 +14,10 @@ block content
           .navbar-brand {{#link-to 'index'}}DataBait{{/link-to}}
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active {{#link-to 'about'}}About{{/link-to}}
+            li {{#link-to 'projects'}}Projects{{/link-to}}
+            li {{#link-to 'about'}}About{{/link-to}}
     .jumbotron {{outlet}}
-  script#about(type="text/x-handlebars")
+  script#projects(type="text/x-handlebars")
     #myCarousel.carousel.slide
       ol.carousel-indicators
         li.active(data-target='#myCarousel', data-slide-to='0')
@@ -25,17 +26,26 @@ block content
       // Carousel items
       .carousel-inner
         .active.item 
-          img(src="http://cdn.stupiddope.com/wp-content/uploads/2011/02/kenewest-e1298140542576.jpg", alt='') 
-          .carousel-caption Gang Signs get thrown up
+          img.resize(src="http://cdn.stupiddope.com/wp-content/uploads/2011/02/kenewest-e1298140542576.jpg", alt='') 
+          .carousel-caption 
+            h4 Gang Signs get thrown up
         .item
-          img(src="http://www.bet.com/topics/k/kendrick-lamar/_jcr_content/topicintro.topicintro.dimg/101111-music-kendrick-lamar-7.jpg", alt='') 
-          .carousel-caption Cocaine laced in marijuana
+          img.resize(src="http://www.bet.com/topics/k/kendrick-lamar/_jcr_content/topicintro.topicintro.dimg/101111-music-kendrick-lamar-7.jpg", alt='') 
+          .carousel-caption 
+            h4 Cocaine laced in marijuana
         .item 
-          img(src="http://cdn.pigeonsandplanes.com/wp-content/uploads/2014/03/mf-doom_jpg_630x420_q85.jpg", alt='')
-          .carousel-caption His name's doom
+          img.resize(src="http://cdn.pigeonsandplanes.com/wp-content/uploads/2014/03/mf-doom_jpg_630x420_q85.jpg", alt='')
+          .carousel-caption 
+            h4 Benzie box
       // Carousel nav
       a.carousel-control.left(href='#myCarousel', data-slide='prev') ‹
       a.carousel-control.right(href='#myCarousel', data-slide='next') ›
+  script#about(type="text/x-handlebars")
+    h2 DataBait is a 
+    p WebDev Company founded by William Guss, Phillip Kuznetsov, and Patrick Chen
+    p Send inquires to requests@databa.itkk
 
-  script#index(type="text/x-handlebars") 
+  script#index(type="text/x-handlebars")
+    h1 DataBait LLC
+    p Number 1 company NA
  
