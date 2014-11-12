@@ -6,8 +6,11 @@ App.Router.map(function() {
 })
 
 $(document).ready(function(){
-	$('.conveyor').slick({
-		infinite:true
-	});
+    $('.conveyor').slick({
+        dots: true,
+        infinite: true,
+        autoplay: true, 
+        centerMode: false,
+        speed: 300,
+    });
 });
-
