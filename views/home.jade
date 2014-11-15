@@ -17,8 +17,7 @@ block content
             li {{#link-to 'projects'}}Projects{{/link-to}}
             li {{#link-to 'about'}}About{{/link-to}}
     .jumbotron {{outlet}}
-  script#projects(type="text/x-handlebars") 
-    {{> project-slider}}
+  script#projects(type="text/x-handlebars") {{> project-slider}}
   script#about(type="text/x-handlebars")
     h2 DataBait is a 
     p WebDev Company founded by William Guss, Phillip Kuznetsov, and Patrick Chen
@@ -31,24 +30,23 @@ block content
         li(data-target='#myCarousel', data-slide-to='2')
       // Carousel items
       .carousel-inner
-        .active.item 
-          .resize
-            img(src="/styles/images/tuna.jpg", alt='tuna') 
-            .carousel-caption 
-              a(href="http://tunadbo.appspot.com")
-                h4 Tuna
         .item
-          img.resize(src="http://www.bet.com/topics/k/kendrick-lamar/_jcr_content/topicintro.topicintro.dimg/101111-music-kendrick-lamar-7.jpg", alt='') 
+          img(src="/styles/images/tuna.jpg", alt='') 
           .carousel-caption 
-            h4 Cocaine laced in marijuana
-        .item 
-          img.resize(src="http://cdn.pigeonsandplanes.com/wp-content/uploads/2014/03/mf-doom_jpg_630x420_q85.jpg", alt='')
+            a(href="http://tunadbo.appspot.com")
+              h3 Tuna
+        .active.item.resize
+          img(src="/styles/images/velocity.png", alt='') 
           .carousel-caption 
-            h4 Benzie box
+            h3 Cocaine laced in marijuana
+        .item.resize
+          img(src="http://cdn.pigeonsandplanes.com/wp-content/uploads/2014/03/mf-doom_jpg_630x420_q85.jpg", alt='')
+          .carousel-caption 
+            h3 Benzie box
       // Carousel nav
       a.carousel-control.left(href='#myCarousel', data-slide='prev') ‹
       a.carousel-control.right(href='#myCarousel', data-slide='next') ›
   script#index(type="text/x-handlebars")
-    h1 DataBait LLC
-    {{> project-slider}}
+    h1 DataBait LLC 
+    <br/ > {{> project-slider}}
  

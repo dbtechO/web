@@ -10,30 +10,45 @@ body{
 	color: EDFFED;
 
 }
-img.resize {
-	height-min:500px;
-	height-max:500px;
+.resize img{
+	min-height: 500px;
 	width:auto;
+	max-height:500px;
 	overflow:hidden;
 	margin-left: auto;
 	margin-right: auto;
 }
+/*
 .resize{
 	width:auto;
 	height-max:500px;
 	overflow:hidden;
 	margin-left: auto;
 	margin-right: auto;
-}
+}*/
 nav {
 	background-color: 486D88;
 }
-.carousel-caption{
-	opacity:0;
+
+.carousel{
+	max-height:500px;
+	overflow:hidden;
+	a:link {
+		color: red;
+	}
 }
-.carousel-caption:hover{
+/*caption control*/
+.carousel-caption{
+	top:375;/*This is gonna be a problem*/
+	bottom: auto;
 	opacity:1.0;
 }
+.carousel-caption:hover{
+	color: green; !important
+	opacity:1.0;
+}
+
+/*Creates minimum width of page, stops at 900 px. Will need adjustment for mobile devices*/
 .carousel-slide{
 	max-width:1600px;
 	min-idth: 900px;
@@ -45,4 +60,16 @@ nav {
 	margin-left: -800px;
 }
 
+/*Removes the gradient that is on the arrow navigation keys*/
+.carousel-control.left, .carousel-control.right {
+	margin-bottom: auto;
+	margin-top: auto;
+    background-image: none
+}
+
+/*attempting to center the chevrons on the carousel*/
+.carousel-control {
+	postiion: absolute;
+	top:50%;
+}
 
