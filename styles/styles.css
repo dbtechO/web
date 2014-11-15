@@ -21,20 +21,6 @@ h1{
 	box-shadow: 1px 1px 5px 54748A;
 
 }
-.resize img{
-	width:100%;
-	
-	margin-left: auto;
-	margin-right: auto;
-}
-/*
-.resize{
-	width:auto;
-	height-max:500px;
-	overflow:hidden;
-	margin-left: auto;
-	margin-right: auto;
-}*/
 nav {
 	background-color: 486D88;
 }
@@ -44,6 +30,13 @@ nav {
 	max-height:500px;
 	overflow:hidden;
 	width:100%;	
+}
+.carousel .item img{
+	width:100%;
+	
+	position: absolute;
+	top: -100%; bottom:-100%;
+	margin: auto;
 }
 .carousel-caption a:link, a:hover{
 	color:white;
@@ -56,16 +49,18 @@ nav {
 .carousel-caption{
 	position:absolute;
 	height:25%;
+	background-color: rgba(0,0,0,1);
 	margin-left: auto;
 	margin-right: auto;
 	top:75%;
-	opacity:0.1;
+	opacity:0.5;
 	right:0%;
 	left:0%;
-	font-weigth:bold;
+	font-weight:bold;
 }
 .carousel-caption:hover{
 	color: green;
+	background-color: rgba(0,0,0,0.5);/*make sure the alpha value matches the opacity of the non-hover carousel-caption*/
 	opacity:1.0;
 }
 
@@ -86,14 +81,10 @@ nav {
 
 /*Removes the gradient that is on the arrow navigation keys*/
 .carousel-control.left, .carousel-control.right {
-	margin-bottom: auto;
-	margin-top: auto;
-    background-image: none
-}
-
-/*attempting to center the chevrons on the carousel*/
-.carousel-control {
-	postiion: absolute;
-	top:50%;
+	display: inline-block;
+	font-size:100px;
+	top:35%;
+    background-image: none;
+    postiion: absolute;
 }
 
