@@ -11,9 +11,17 @@ body{
 
 }
 img.resize {
-	min-height:500px;
-	max-height: 500px;
-	width: auto;
+	height-min:500px;
+	height-max:500px;
+	width:auto;
+	overflow:hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+.resize{
+	width:auto;
+	height-max:500px;
+	overflow:hidden;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -26,3 +34,15 @@ nav {
 .carousel-caption:hover{
 	opacity:1.0;
 }
+.carousel-slide{
+	max-width:1600px;
+	min-idth: 900px;
+	overflow:hidden;
+}
+.carousel-inner{
+	width: 1600px;
+	left: 50%;
+	margin-left: -800px;
+}
+
+
