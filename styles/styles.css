@@ -1,5 +1,15 @@
+/*turns out this is firefox specific, however it's good organization and easy to copy/paste. 
+Actually implemented through SASS I believe.*/
+:root {
+	var-primary: 29516D;
+	var-secondary:708EA4;
+	var-tertiary: 486D88;
+}
 body{
 	background-color: 29516D;
+}
+h1{
+	text-shadow: 1px 1px 1px #54748A;
 }
 .jumbotron{
 	background-color:708EA4;
@@ -8,13 +18,12 @@ body{
 	margin-left:auto;
 	margin-right:auto;
 	color: EDFFED;
+	box-shadow: 1px 1px 5px 54748A;
 
 }
 .resize img{
-	min-height: 500px;
-	width:auto;
-	max-height:500px;
-	overflow:hidden;
+	width:100%;
+	
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -29,22 +38,34 @@ body{
 nav {
 	background-color: 486D88;
 }
-
-.carousel{
+.carousel .item{
+	postiion: relative;
+	height:500px;
 	max-height:500px;
 	overflow:hidden;
-	a:link {
-		color: red;
-	}
+	width:100%;	
+}
+.carousel-caption a:link, a:hover{
+	color:white;
+	text-decoration:none;
+}
+.carousel-caption a:hover{
+	color: #5555DD;
 }
 /*caption control*/
 .carousel-caption{
-	top:375;/*This is gonna be a problem*/
-	bottom: auto;
-	opacity:1.0;
+	position:absolute;
+	height:25%;
+	margin-left: auto;
+	margin-right: auto;
+	top:75%;
+	opacity:0.1;
+	right:0%;
+	left:0%;
+	font-weigth:bold;
 }
 .carousel-caption:hover{
-	color: green; !important
+	color: green;
 	opacity:1.0;
 }
 
@@ -55,9 +76,12 @@ nav {
 	overflow:hidden;
 }
 .carousel-inner{
+	background-color: 486D88;
 	width: 1600px;
 	left: 50%;
 	margin-left: -800px;
+	padding-left: 0px;
+	box-shadow: 1px 1px 5px #29516D;
 }
 
 /*Removes the gradient that is on the arrow navigation keys*/
