@@ -1,66 +1,88 @@
-extends ./main.jade
+html
+  head
+    title DataBait #{title}
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
+    block scripts
+      link(rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css")
+      link(rel="stylesheet" href="styles/bootstrap/css/bootstrap-theme.min.css")
+      link(rel="stylesheet" href="styles/emberjs/css/normalize.css")
+      link(rel='stylesheet', type='text/css', href='styles/slick/slick/slick.css')
+      link(rel="stylesheet" href="styles/emberjs/css/style.css")
+      link(rel="stylesheet" href="styles/styles.css")
+  body
+    block content 
+      script(type="text/x-handlebars")
+        nav.navbar.navbar-default(role='navigation')
+          .container-fluid
+            .navbar-header
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              .navbar-brand {{#link-to 'index'}}DataBait{{/link-to}}
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+              ul.nav.navbar-nav
+                li {{#link-to 'projects'}}Projects{{/link-to}}
+                li {{#link-to 'about'}}About{{/link-to}}
+        .jumbotron {{outlet}}
+      script#projects(type="text/x-handlebars") {{> project-slider}}
+      script#about(type="text/x-handlebars")
+        h2 DataBait is a 
+        p WebDev Company founded by William Guss, Phillip Kuznetsov, and Patrick Chen
+        p Send inquires to requests@databa.itkk
+        .row
+          .col-md-4.bio
+            a(href="https://github.com/philkuz")
+              h3 Phillip Kuznetsov
+            img(src="https://avatars1.githubusercontent.com/u/5456019?v=3&s=460")
+            p Philllip Kuznetsov has worked in Web Development for 20 years and has developed an intense passion for the skill.
+          .col-md-4.bio
+            a(href="https://github.com/MadCowD")
+              h3 Will Guss
+            img(src="https://avatars0.githubusercontent.com/u/719535?v=3&s=460")
+          .col-md-4.bio
+            a(href="https://github.com/patrickbochen")
+              h3 Patrick Chen
+            img(src="https://avatars0.githubusercontent.com/u/6289296?v=3&s=460")
+      script#project-slider(type="text/x-handlebars")
+        #myCarousel.carousel.slide
+          ol.carousel-indicators
+            li.active(data-target='#myCarousel', data-slide-to='0')
+            li(data-target='#myCarousel', data-slide-to='1')
+            li(data-target='#myCarousel', data-slide-to='2')
+          // Carousel items
+          .carousel-inner
+            .item
+              img(src="/styles/images/tuna.jpg", alt='') 
+              .carousel-caption 
+                a(href="http://tunadbo.appspot.com")
+                  h2 Tuna
+            .active.item
+              img(src="/styles/images/velocity.png", alt='') 
+              .carousel-caption 
+                h2 Cocaine laced in marijuana
+            .item
+              img(src="http://cdn.pigeonsandplanes.com/wp-content/uploads/2014/03/mf-doom_jpg_630x420_q85.jpg", alt='')
+              .carousel-caption 
+                h2 Benzie box
+          // Carousel nav
+          a.carousel-control.left(href='#myCarousel', data-slide='prev') ‹
+          a.carousel-control.right(href='#myCarousel', data-slide='next') ›
+      script#index(type="text/x-handlebars")
+        h1 DataBait
+        <br/ > {{> project-slider}}
 
-block content
-  script(type="text/x-handlebars")
-    nav.navbar.navbar-default(role='navigation')
-      .container-fluid
-        .navbar-header
-          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          .navbar-brand {{#link-to 'index'}}DataBait{{/link-to}}
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li {{#link-to 'projects'}}Projects{{/link-to}}
-            li {{#link-to 'about'}}About{{/link-to}}
-    .jumbotron {{outlet}}
-  script#projects(type="text/x-handlebars") {{> project-slider}}
-  script#about(type="text/x-handlebars")
-    h2 DataBait is a 
-    p WebDev Company founded by William Guss, Phillip Kuznetsov, and Patrick Chen
-    p Send inquires to requests@databa.itkk
-    .row
-      .col-md-4.bio
-        a(href="https://github.com/philkuz")
-          h3 Phillip Kuznetsov
-        img(src="https://avatars1.githubusercontent.com/u/5456019?v=3&s=460")
-        p Philllip Kuznetsov has worked in Web Development for 20 years and has developed an intense passion for the skill.
-      .col-md-4.bio
-        a(href="https://github.com/MadCowD")
-          h3 Will Guss
-        img(src="https://avatars0.githubusercontent.com/u/719535?v=3&s=460")
-      .col-md-4.bio
-        a(href="https://github.com/patrickbochen")
-          h3 Patrick Chen
-        img(src="https://avatars0.githubusercontent.com/u/6289296?v=3&s=460")
-  script#project-slider(type="text/x-handlebars")
-    #myCarousel.carousel.slide
-      ol.carousel-indicators
-        li.active(data-target='#myCarousel', data-slide-to='0')
-        li(data-target='#myCarousel', data-slide-to='1')
-        li(data-target='#myCarousel', data-slide-to='2')
-      // Carousel items
-      .carousel-inner
-        .item
-          img(src="/styles/images/tuna.jpg", alt='') 
-          .carousel-caption 
-            a(href="http://tunadbo.appspot.com")
-              h2 Tuna
-        .active.item
-          img(src="/styles/images/velocity.png", alt='') 
-          .carousel-caption 
-            h2 Velocity Tracker
-        .item
-          img(src="http://cdn.pigeonsandplanes.com/wp-content/uploads/2014/03/mf-doom_jpg_630x420_q85.jpg", alt='')
-          .carousel-caption 
-            h2 He cleans his metal mask with gasoline, they after him/ Last seen pullin chicks like a fiend pull a fast one. 
-      // Carousel nav
-      a.carousel-control.left(href='#myCarousel', data-slide='prev') ‹
-      a.carousel-control.right(href='#myCarousel', data-slide='next') ›
-  script#index(type="text/x-handlebars")
-    h1 DataBait LLC 
-    <br/ > {{> project-slider}}
- 
+    block foot
+      
+    block js
+      script(src="styles/emberjs/js/libs/jquery-1.10.2.js")
+      script(src="styles/bootstrap/js/bootstrap.min.js")
+      script(src="styles/bootstrap/js/npm.js")
+      script(src="styles/emberjs/js/libs/handlebars-v1.3.0.js")
+      script(src="styles/emberjs/js/libs/ember-1.8.1.js")
+      script(src="styles/slick/slick/slick.min.js")
+      script(src="styles/client.js")
+>>>>>>> a93da0f760126889ecbf4b830bb4756365bb8eff
