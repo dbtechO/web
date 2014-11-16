@@ -3,7 +3,7 @@ var express = require('express');
 router = express.Router();
 
 //APIs
-router.use('/testr', require('./testr')); //test.r
+router.use('/testr', require('./testr').router); //testr
 
 //Logs API requests.
 router.use(function(req,res,next){
