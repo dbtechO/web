@@ -25,10 +25,11 @@ html
               .navbar-brand {{#link-to 'index'}}DataBait{{/link-to}}
             #bs-example-navbar-collapse-1.collapse.navbar-collapse
               ul.nav.navbar-nav
-                li {{#link-to 'projects'}}Projects{{/link-to}}
-                li {{#link-to 'about'}}About{{/link-to}}
+                li {{#link-to 'work'}}WORK{{/link-to}}
+                li {{#link-to 'about'}}ABOUT{{/link-to}}
+                li {{#link-to 'blog'}}BLOG{{/link-to}}
         .jumbotron {{outlet}}
-      script#projects(type="text/x-handlebars") {{> project-slider}}
+      script#work(type="text/x-handlebars") {{> project-slider}}
       script#about(type="text/x-handlebars")
         h2 DataBait is a 
         p WebDev Company founded by William Guss, Phillip Kuznetsov, and Patrick Chen
@@ -74,6 +75,9 @@ html
       script#index(type="text/x-handlebars")
         h1 DataBait
         <br/ > {{> project-slider}}
+      script#blog(type="text/x-handlebars")
+        h1 blog
+        p wass gud hoes
 
     block foot
       
@@ -85,4 +89,3 @@ html
       script(src="styles/emberjs/js/libs/ember-1.8.1.js")
       script(src="styles/slick/slick/slick.min.js")
       script(src="styles/client.js")
->>>>>>> a93da0f760126889ecbf4b830bb4756365bb8eff

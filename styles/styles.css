@@ -103,8 +103,15 @@ nav {
 	font-weight: bold;
 }
 .bio img{
-	height:50%;
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
 	max-height:400px;
-	width:auto;
+	height:auto;
+}
+.navbar{
+	margin-top: 0px;
+	border-radius: 0px;
+	box-shadow: 1px 1px 5px 54748A;
 }
 

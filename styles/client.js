@@ -1,7 +1,8 @@
 App = Ember.Application.create();
 App.Router.map(function() {
 	this.resource('about');
-	this.resource('projects');
+	this.resource('work');
+	this.resource('blog');
 })
 
 $('.carousel').carousel()
