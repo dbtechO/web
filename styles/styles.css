@@ -11,6 +11,12 @@ body{
 h1{
 	text-shadow: 1px 1px 1px #54748A;
 }
+a:link{
+	color:#000000;
+}
+a:hover{
+	color:#000000;
+}
 .jumbotron{
 	background-color:708EA4;
 	padding-left:50px;
@@ -67,14 +73,15 @@ nav {
 /*Creates minimum width of page, stops at 900 px. Will need adjustment for mobile devices*/
 .carousel-slide{
 	max-width:1600px;
-	min-idth: 900px;
+	min-width: 900px;
+	margin-left:100px;
+	margin-right:100px;
 	overflow:hidden;
 }
 .carousel-inner{
 	background-color: 486D88;
-	width: 1600px;
-	left: 50%;
-	margin-left: -800px;
+	width: 100%;
+	
 	padding-left: 0px;
 	box-shadow: 1px 1px 5px #29516D;
 }
@@ -86,5 +93,18 @@ nav {
 	top:35%;
     background-image: none;
     postiion: absolute;
+}
+.bio{
+	position:relative;
+	padding:2px;
+	font-weight: bold;
+}
+.bio h3{
+	font-weight: bold;
+}
+.bio img{
+	height:50%;
+	max-height:400px;
+	width:auto;
 }
 
